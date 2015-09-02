@@ -1,0 +1,488 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+main, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, menu, nav, section {
+	display: block;
+}
+html{
+	font-size: 15px;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+/* Don't kill focus outline for keyboard users: http://24ways.org/2009/dont-lose-your-focus */
+a:hover, a:active {
+    outline: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+*{
+	box-sizing: border-box;
+}
+
+figure{
+	margin-bottom: -3px; /* Nie wiedzieć czemu pojawia się taki margines */
+}
+
+.main-header{
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.flex-header-top{
+	display: flex;
+	width: 100%;
+	height: 49px;
+	margin: auto;
+	font-family: Arial, sans-serif;
+	color: #fff;
+	font-size: .9rem;
+	font-weight: 100;
+	background-color: #276187;
+	border-bottom: 1px solid #75b8e5;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.sign-in{
+	margin: 0 1%;
+}
+
+.login-fb{
+	margin-right: 1%;
+}
+
+.top-link{
+	color: #fff;
+	text-decoration: none;
+}
+
+.flex-header-bottom{
+	display: flex;
+	flex: 0 0 100%;
+	width: 100%;
+	min-height: 97px;
+	align-items: center;
+	border-bottom: 1px solid #75b8e5;
+	background-image: url(../images/bg-header-bottom.jpg);
+	background-color: #0c4f7c;
+	background-position: center center;
+}
+
+.logo{
+	margin-left: 14%;
+}
+
+.main-menu{
+	display: flex;
+	margin: auto;
+}
+
+.main-ul{
+	list-style: none;
+	width: 100%;
+}
+
+.main-li{
+	display: inline;
+	padding: 34px 10px;
+	margin-left: 15px; /* Dlaczego w % ostatni element li łamany jest do nowego wiersza? */
+	border-bottom: 0 solid #f9d100;
+	transition: border-bottom .3s ease-out;
+}
+
+.main-li:hover{
+	border-bottom: 5px solid #f9d100;
+}
+
+.main-li a{
+	text-decoration: none;
+	color: #fff;
+	font-family: Calibri, sans-serif;
+	font-size: 1.4rem;
+	font-weight: 100;
+}
+
+.search-bar{
+	margin-right: 2%;
+	height: 43px;
+}
+
+/* Jak poprawnie podłożyć bg image pod search element */
+.search{
+	height: 43px;
+	padding-left: 5%;
+	box-shadow: 2px 2px 10px 1px #3f3640 inset;
+	border: 1px solid #5fa2cf;
+	background-color: #084b78;
+}
+
+.submit{
+	height: 43px;
+	width: 20%;
+	margin-left: -10px;
+	border: 1px solid #5fa2cf;
+	border-left: none;
+	color: #084b78;
+	line-height: 15px;
+	background: #084b78 url(../images/submit.png) 50% 50% no-repeat;
+	box-shadow: 0 2px 10px 1px #3f3640 inset;
+	cursor: pointer;
+}
+
+.hero{
+	display: flex;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+
+.hero figure img{
+	width: 100%;
+	margin: 0;
+}
+
+.movie-wrapper{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width:40%;
+	height: 60%;
+	transform: translate(-50%,-50%);
+	background: rgba(174,214,249,.5);
+}
+
+.two-columns{
+	display: flex;
+	/*height: 600px;*/
+	margin: 0;
+	padding: 0;
+	color: #fff;
+}
+
+.what-is-this{
+	max-height: 600px;
+	min-height: 500px;
+	margin: 0;
+	padding: 5% 7% 5% 15%;
+	flex-basis: 50%;
+	font-family: Arial, sans-serif;
+	background-image: url(../images/what-is-this.jpg);
+	background-position: center center;
+	background-size: cover;
+}
+
+.flex-news-content{
+	display: flex;
+	justify-content: flex-end;
+}
+
+.news-content{
+	flex: 1 1 50%;
+	padding-top: 7%;
+	font-size: .8rem;
+	text-indent: 15px;
+}
+
+.news-quote{
+	flex: 1 1 40%;
+	padding-top: 7%;
+	padding-left: 8%;
+	font-size: 1.5rem;
+}
+
+.q-mark{
+	font-size: 2rem;
+}
+
+.news-quote cite{
+	font-size: .7rem;
+}
+
+.news-cite{
+	text-align: right;
+}
+
+.news-content.bottom{
+	padding-top: 0;
+}
+
+.read-more{
+	padding-top: 4%;
+	font-size: .8rem;
+	float: right;
+}
+
+.read-more a{
+	color: #bca51d;
+}
+
+.news{
+	/*display: flex;
+	flex-basis: 50%;
+	flex-wrap: wrap;*/
+	width: 50%;
+	max-height: 600px;
+	min-height: 500px;
+	margin: 0;
+	padding: 5% 15% 5% 7%;
+	font-family: Arial, sans-serif;
+	background: #00101c;
+}
+
+.flex-news-header{
+	display: flex;
+}
+
+.news-header{
+	flex-basis: 40%;
+}
+
+.flex-news-left-right{
+	display: flex;
+	padding-top: 7%;
+}
+
+.title{
+	font-family: Calibri, sans-serif;
+	font-size: 1.3rem;
+	font-weight: 100;
+}
+
+.date{
+	font-size: .8rem;
+	font-family: Calibri, sans-serif;
+	color: #8c9aa5;
+	padding-bottom: 8%;
+}
+
+.news-left{
+	flex-basis: 50%;
+}
+
+.news-right{
+	flex-basis: 50%;
+	padding-left: 9%;
+}
+
+.flex-gallery{
+	display: flex;
+}
+
+.gallery{
+	overflow: hidden;
+}
+
+.gallery img{
+	width: 100%;
+}
+
+/* Jakie właściwości box-model(height) w odniesieniu do responive
+nadali byście tej sekcji: %, min-height, max-height?, @media */
+.slider{
+	display: flex;
+	height: 600px;
+	justify-content: center;
+	background: #407a9f url(../images/bg-slider.jpg) 0 0 no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
+
+.flex-slider{
+	display: flex;
+	justify-content: center;
+	margin: auto;
+	width: 60%;
+	height: 63%;
+}
+
+.prev{
+	height: 156px;
+	width: 92px;
+	margin-right: 6%;
+	align-self: center;
+	cursor: pointer;
+}
+
+.prev img:hover{
+	background-image: url(../images/prev-hover.png);
+}
+
+.next{
+	height: 156px;
+	width: 92px;
+	margin-left: 6%;
+	align-self: center;
+	cursor: pointer;
+}
+
+.next img:hover{
+	background-image: url(../images/next-hover.png);
+}
+
+.slide{
+	width: 279px;
+	height: 375px;
+	padding: 8px;
+	margin-right: 6%;
+	font-family: Arial, sans-serif;
+	color: #fff;
+	background: #00101c;
+}
+
+.slide-3{
+	margin-right: 0;
+}
+
+.slide h3{
+	font-size: 1.2rem;
+	font-weight: 100;
+	padding-top: 9%;
+}
+
+.slide p{
+	padding-top: 5%;
+	font-size: .9rem;
+	text-indent: 15px;
+}
+
+.flex-map{
+	display: flex;
+	overflow: hidden;
+}
+
+.contact{
+	position: relative;
+}
+
+.map{
+	width: 100%;
+}
+
+.flex-footer{
+	display: flex;
+	width: 100%;
+	height: 99px;
+	padding-left: 3%;
+	align-items: center;
+	font-family: Arial, sans-serif;
+	font-size: .8rem;
+	color: #fff;
+	background: #00101c;
+}
+
+.contact-wrapper{
+	width: 44.8%;
+	height: 520px;
+	background-color: #00101c;
+	position: absolute;
+	top: 40px;
+	right: 3%;
+}
+
+.flex-contact{
+}
+
+.flex-contact-h2{
+	padding: 5% 0 0 5%;
+	font-size: 1.3rem;
+	font-family: Calibri, sans-serif;
+	color: #fff;
+}
+
+.flex-contact-left-right{
+	display: flex;
+	padding-right: 2%;
+}
+
+.contact-data{
+	flex: 1 1 50%;
+	padding: 5% 0 0 5%;
+	margin-right: 15px;
+	color: #fff;
+	font-family: Arial, sans-serif;
+}
+
+.contact-right{
+	display: flex;
+	padding: 5% 0 0 5%;
+	flex: 1 1 50%;
+}
+
+.name, .email, .message{
+	width: 80%;
+	height: 44px;
+	margin-bottom: 2%;
+	padding: 5px 0 5px 20px;
+	border: 1px solid #fff;
+	color: #a5adb4;
+	box-shadow: 2px 2px 10px 2px #cccbcd inset;
+}
+
+.message{
+	height: 188px;
+}
+
+.form-button{
+	width: 80%;
+	height: 44px;
+	color: #192732;
+	background-color: #c3ae33;
+	border: 0;
+	cursor: pointer;
+}
+
+.footer-a{
+	font-size: .8rem;
+	color: #bca51d;
+}
+
+.fb{
+	margin-left: auto;
+	margin-right: 1.5%;
+}
+
+.twitter{
+	margin-right: 3%;
+}
+
+
+
+
+
+
+
