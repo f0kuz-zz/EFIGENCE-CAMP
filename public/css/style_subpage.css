@@ -89,10 +89,11 @@ table {
 }
 
 .top-link{
+	line-height: 24px;
 	display: table-cell;
 	vertical-align: middle;
-	padding: 0 8px; /* dlaczego w % słowa po spacji łamią się do nowej lini? 
-	Czy w responsive używamy % czy px?*/
+	padding: 0 8px; /* dlaczego w % słowa po spacji łamią się do nowej lini?
+	Czy w responsive używamy % czy px? - ZALEŻY!*/
 }
 
 /* HEADER BOTTOM */
@@ -114,13 +115,12 @@ nadac tej sekcji: %, min-height, max-height?, @media */
 }
 
 .logo{
-	float: left;
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
 }
 
-/* Jak lepiej wyśrodkować w pionie diva z listą? Nadając display: table; 
+/* Jak lepiej wyśrodkować w pionie diva z listą? Nadając display: table;
 czy line-height przy którym łamanie do nowej linii ma duży padding */
 .main-menu{
 	margin: 0 auto;
@@ -132,11 +132,12 @@ czy line-height przy którym łamanie do nowej linii ma duży padding */
 
 .main-ul{
 	list-style: none;
+	text-align: center;
 }
 
 .main-li{
 	display: inline;
-	padding: 34px 10px;
+	padding: 32px 10px;
 	border-bottom: 0 solid #f9d100;
 	transition: border-bottom .3s ease-out;
 }
@@ -148,19 +149,40 @@ czy line-height przy którym łamanie do nowej linii ma duży padding */
 .main-li a{
 	color: #fff;
 	text-decoration: none;
-	font-family: Calibri, sans-serif;
-	font-size: 1.4rem;
+	font-family: "Roboto Condensed", sans-serif;
 	font-weight: 100;
+	font-size: 1.6rem;
 }
 
 .search-bar{
-	float: right;
 	position: absolute;
 	top: 50%;
+	right: 1%;
 	transform: translateX(-50%);
-	transform: translateY(-50%); /* Dlaczego dodając translateX(-50%) browser 
+	transform: translateY(-50%); /* Dlaczego dodając translateX(-50%) browser
 	wyłącza wł translateY? */
-	right: 2%; /* Dlaczego float: right; nie działa po dodaniu position: absolute;*/
+}
+
+.search{
+	height: 46px;
+	width: 259px;
+	padding: 16px 15px 9px 20px;
+	box-shadow: #063a5e 2px 2px 1px 2px inset;
+	border: 1px solid #5fa2cf;
+	background-color: #084b78;
+	font-family: "Roboto Condensed", sans-serif;
+	color: #fff;
+}
+
+.search-button{
+	position: relative;
+	top: 6px;
+	left: -43px;
+	height: 30px;
+	width: 31px;
+	border: 0;
+	cursor: pointer;
+	background: url(../images/submit.png) center center no-repeat;
 }
 
 /* TOP BANNER */
@@ -182,7 +204,7 @@ czy line-height przy którym łamanie do nowej linii ma duży padding */
 	top: 50%;
 	padding-left: 0;
 	margin-left: -15px; /* Jak wyrównać lewy margines do zdjęcia niżej? */
-	transform: translateY(-50%); /* Dlaczego dodając translateX(-50%) browser 
+	transform: translateY(-50%); /* Dlaczego dodając translateX(-50%) browser
 	wyłączał translateY? */
 	text-align: right;
 }
