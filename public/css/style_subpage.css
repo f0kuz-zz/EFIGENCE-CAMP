@@ -164,6 +164,7 @@ czy line-height przy którym łamanie do nowej linii ma duży padding */
 }
 
 .search{
+	position: relative;
 	height: 46px;
 	width: 259px;
 	padding: 16px 15px 9px 20px;
@@ -175,9 +176,10 @@ czy line-height przy którym łamanie do nowej linii ma duży padding */
 }
 
 .search-button{
-	position: relative;
-	top: 6px;
-	left: -43px;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	right: 10px;
 	height: 30px;
 	width: 31px;
 	border: 0;
@@ -186,6 +188,11 @@ czy line-height przy którym łamanie do nowej linii ma duży padding */
 }
 
 /* TOP BANNER */
+
+.banner figure{
+	margin: 0;
+	padding: 0;
+}
 
 .top-banner{
 	width: 100%;
@@ -476,7 +483,7 @@ jest do nowego wiersza -następna strona- */ /* Bo nie była nadany padding coć
 	color: #fff;
 	background: url(../images/pagin-next-hover.png) right center no-repeat;;
 }
-}
+
 
 /* FOOTER */
 
