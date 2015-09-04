@@ -394,44 +394,88 @@ czy line-height przy którym łamanie do nowej linii ma duży padding */
 
 /* paginacja */
 
-.paginacja{
+.pagina-bar{
+	position: relative;
 	height: 101px;
-	line-height: 101px;
+	padding: 0;
 	background-color: #427ca2;
 }
 
-.pagin-a{
-
+.pagina-wrapper{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
 }
 
-.pagin-a{
-	color: #f1f2f5;
-}
-
-.pagin-a:hover{
-	color: rgba(241,242,245,.3);
-}
-
-.paginacja-ul{
+.pagina-ul-prev{
 	list-style: none;
-	margin: 0 auto;
-	text-align: center;
+	padding: 0; /* PADDING WPŁYWA NA ŁAMANIE LINI ZDANIA - TU OKRESLONY NIE PRZENOSI DO NOWEJ LINII */
+	margin: 0;
 }
 
-.paginacja-ul li{
+.pagina-ul-prev a{
 	display: inline-block;
-}
-
-.prev{
-	width: auto;
-	padding: 15px 0 15px 40px;
+	min-width: 180px;
+	height: 35px;
+	padding-left: 38px;
+	line-height: 35px;
+	color: #86a5bd;
+	text-decoration: underline;
+	font-size: .9333rem;
 	background: url(../images/pagin-prev.png) left center no-repeat;
 }
 
-.next{
-	width: 190px;
+.pagina-ul-prev a:hover{
+	color: #fff;
+	background: url(../images/pagin-prev-hover.png) left center no-repeat;
+}
+.pagina-ul{
+	display: table;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+/* Dlaczego słowo po spacji łamane
+jest do nowego wiersza -następna strona- */ /* Bo nie była nadany padding coćby na 0 */
+.pagina-ul li{
+	display: table-cell;
+	font-family: Arial, sans-serif;
+	font-size: 1.4rem;
+	color: #fff;
+	font-weight: 500;
+	padding: 7px 7px 7px 12px;
+	cursor: pointer;
+	vertical-align: middle;
+}
+
+.pagina-ul li:hover{
+	background-color: #bca51d;
+}
+
+
+.pagina-ul-next{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.pagina-ul-next a{
+	display: inline-block;
+	min-width: 180px;
+	height: 35px;
+	padding-right: 38px;
+	line-height: 35px;
+	color: #86a5bd;
+	text-decoration: underline;
+	font-size: .9333rem;
 	background: url(../images/pagin-next.png) right center no-repeat;
-	display: inline-block;;
+}
+
+.pagina-ul-next a:hover{
+	color: #fff;
+	background: url(../images/pagin-next-hover.png) right center no-repeat;;
+}
 }
 
 /* FOOTER */
