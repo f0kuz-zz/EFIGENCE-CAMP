@@ -289,23 +289,42 @@ czy line-height przy którym łamanie do nowej linii ma duży padding */
 
 	/* PHOTO */
 
-.photo{
-	background-color: #fff;
-	background-position: 50% 0;
-	transition: all .2s ease-out;
-}
-
-.photo:hover{
-	background-position: 50% -100%;
-	background-color: rgba(195,75,59,.85);
-}
-
-.article-center{
-	position: absolute;
+ .article-center{
+	position: relative;
 	top: 50%;
 	transform: translateY(-50%);
 	padding: 15px 0;
 }
+
+.article-center figure{
+	position: relative;
+	cursor: pointer;
+	text-align: center;
+
+}
+
+.article-center figure::after{
+	content: '';
+	position: absolute;
+	background: url(../images/hover-plus.png) center center no-repeat;
+	display: block;
+	width: 60px;
+	height: 60px;
+	text-align: center;
+	transform: translateY(50%);
+
+
+}
+
+.article-center figure img{
+	padding: 0 0;
+}
+
+/*.plus-div{
+	position: absolute;
+	top: 80%;
+	left: 8%;
+}*/
 
 .desc h3{
 	font-size: 1.8rem;
