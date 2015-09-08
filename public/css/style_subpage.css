@@ -316,14 +316,12 @@ czy line-height przy którym łamanie do nowej linii ma duży padding */
 	background-size: cover;
 	width: 100%;
 	height: 100%;
-	/*transform: translate3d(0, 0, 0);*/
 	opacity: 0;
 	transition: opacity .25s;
 	z-index: 1;
 }
 
 .offer-photo:hover::after{
-	/*transform: translate3d(0, -100%, 0);*/
 	opacity: .85;
 }
 
@@ -336,20 +334,22 @@ czy line-height przy którym łamanie do nowej linii ma duży padding */
 }
 
 
+/* Jak najlepiej wycentrować wzgl offer-img?
+Jeśli translate3d chcę użyć do animacji a nie pozycji startowej */
 .plusik{
 	position: absolute;
 	width: 55px;
 	height: 55px;
-	left: 43.67816091954023%;
+	left: 50%;
 	top: 50%;
 	opacity: 0;
-	transform: translate3d(0,0,0);
+	transform: translate3d(-50%,0,0);
 	transition: transform .55s, opacity .45s ease-in;
 }
 
 .offer-photo:hover .plusik{
 	opacity: 1;
-	transform: translate3d(0, -50%, 0);
+	transform: translate3d(-50%, -50%, 0);
 	z-index: 2;
 }
 

@@ -57,11 +57,15 @@ figure{
 	margin-bottom: -3px; /* Nie wiedzieć czemu pojawia się taki margines */
 }
 
+/* MAIN HEADER */
+
 .main-header{
 	width: 100%;
 	margin: 0;
 	padding: 0;
 }
+
+/* HEADER TOP */
 
 .flex-header-top{
 	display: flex;
@@ -91,6 +95,8 @@ figure{
 	text-decoration: none;
 }
 
+/* HEADER BOTTOM */
+
 .flex-header-bottom{
 	display: flex;
 	flex: 0 0 100%;
@@ -103,9 +109,13 @@ figure{
 	background-position: center center;
 }
 
+	/* LOGO */
+
 .logo{
 	margin-left: 14%;
 }
+
+	/* MAIN MENU */
 
 .main-menu{
 	display: flex;
@@ -137,6 +147,8 @@ figure{
 	font-weight: 100;
 }
 
+	/* SEARCH BAR */
+
 .search-bar{
 	margin-right: 2%;
 	height: 43px;
@@ -164,6 +176,8 @@ figure{
 	cursor: pointer;
 }
 
+/* HERO */
+
 .hero{
 	display: flex;
 	margin: 0;
@@ -171,20 +185,101 @@ figure{
 	position: relative;
 }
 
-.hero figure img{
+.hero-img{
+	height: 799px;
+	width: 1920px;
+	background-image: url(../images/hero.jpg);
+	background-position: center center;
+	background-size: cover;
 	width: 100%;
 	margin: 0;
 }
 
 .movie-wrapper{
+	display: flex;
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	width:40%;
+	/*width:40%; - dlaczego dopiero po wyłączeniu tej wł. dzieci tego elementu
+	dopasowują się w 100% do tego rodzica*/
+	width: 35%;
 	height: 60%;
 	transform: translate(-50%,-50%);
 	background: rgba(174,214,249,.5);
+	box-shadow: 3px 3px 18px 6px rgba(0,0,0,.35);
 }
+
+.movie{
+	display: flex;
+}
+
+.play-movie{
+	display: flex;
+	margin: 0;
+	width: 100%;
+	color: #fff;
+	font-family: "Roboto Condensed", sans-serif;
+	text-decoration: none;
+	text-align: center;
+	align-content: center;
+	flex-wrap: wrap;
+}
+
+.flex-play-btn{
+	display: flex;
+	flex: 1 0 100%;
+	justify-content: center;
+	opacity: .3;
+	transition: opacity .25s ease-out;
+	width: 100%;
+	height: 100%;
+}
+
+.play-movie:hover .flex-play-btn{
+	opacity: 1;
+}
+
+.flex-play-figc{
+	display: flex;
+	flex: 1 0 100%;
+	justify-content: center;
+}
+
+.play-movie figcaption{
+	padding-top: 5em;
+	align-self: center;
+	text-align: center;
+	margin: auto;
+	width: 80%;
+}
+
+.play-movie h3{
+	color: #f1f2f5;
+	font-size: 4.2rem;
+	text-transform: uppercase;
+	text-shadow: 2px 2px 2px #000;
+	font-weight: 300;
+}
+
+.flex-play-figc p{
+	padding-top: 1em;
+	color: #f1f2f5;
+	font-size: 1.6rem;
+	text-shadow: 2px 2px 2px #000;
+}
+
+.flex-play-figc a{
+	display: block;
+	position: absolute; /* po dodaniu position: absolute i left 0 top 0
+	element a osiąga wkoncu min-height i width */
+	top: 0;
+	left: 0;
+	min-height: 100%;
+	width: 100%;
+	text-indent: -9999px;
+}
+
+/* TWO COLUMNS */
 
 .two-columns{
 	display: flex;
@@ -299,17 +394,102 @@ figure{
 	padding-left: 9%;
 }
 
+/* GALLERY */
+
 .flex-gallery{
 	display: flex;
 }
 
 .gallery{
+	position: relative;
 	overflow: hidden;
+	cursor: pointer;
 }
 
-.gallery img{
+.gallery::after{
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	content: '';
+	background: #bca51d;
 	width: 100%;
+	height: 100%;
+	opacity: 0;
+	z-index: 1;
+	transition: opacity .18s;
 }
+
+.gallery:hover::after{
+	opacity: .85;
+}
+
+.gallery-figure{
+	position: relative;
+	cursor: pointer;
+}
+
+.gallery-figure a{
+	position: absolute;
+	top: 0;
+	padding: 0;
+	display: block;
+	min-height: 100%;
+	width: 100%;
+	text-indent: -9999px;
+	z-index: 2;
+}
+
+.gallery-figc{
+	position: absolute;
+	top: 40%;
+	opacity: 0;
+	transition: opacity .25s;
+	z-index: 2;
+}
+
+.gallery-figure:hover .gallery-figc{
+	opacity: 1;
+}
+
+.plusik{
+	display: block;
+	position: absolute;
+	width: 55px;
+	height: 55px;
+	top: 0;
+	left: 50%;
+	align-self: flex-start;
+	opacity: .3;
+	transform: scaleZ(1) translate3d(-50%, 320%, 0);
+	transition: transform .35s, opacity .35s;
+	z-index: 2;
+}
+
+.gallery-figure:hover .plusik{
+	opacity: 1;
+	transform: scaleZ(2) translate3d(-50%, 150%, 0);
+}
+
+.gallery-figc h3{
+	padding: 1em;
+	font-family: "Roboto Condensed", sans-serif;
+	font-size: 1.6rem;
+	color: #fff;
+}
+
+.gallery-figc p{
+	padding: 0 4.8em;
+	text-align: justify;
+	font-family: "Roboto Condensed", sans-serif;
+	font-size: 1rem;
+	font-weight: 500;
+	color: #fff;
+	text-indent: 20px;
+
+}
+
+/* SLIDER */
 
 /* Jakie właściwości box-model(height) w odniesieniu do responive
 nadali byście tej sekcji: %, min-height, max-height?, @media */

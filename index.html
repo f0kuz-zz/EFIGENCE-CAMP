@@ -15,15 +15,17 @@
 	<link rel="stylesheet" href="public/css/app.css">
 	<link rel="stylesheet" href="icomoon/style.css">
 
-	<<!-- <script src="//code.jquery.com/jquery-1.11.3.min.js"></script> -->
+	<link href='https://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+
+	<!-- <script src="//code.jquery.com/jquery-1.11.3.min.js"></script> -->
 </head>
 <body>
 
 	<header class="main-header">
 		<div class="flex-header-top">
-				<div class="register"><a href="" class="top-link">Zarejestruj się</a></div>
-				<div class="sign-in"><a href="" class="top-link"><i class="icon-unlocked"></i>Zaloguj</a></div>
-				<div class="login-fb"><a href="" class="top-link"><i class="icon-facebook3"></i>Dołącz przez FB</a></div>
+			<div class="register"><a href="" class="top-link">Zarejestruj się</a></div>
+			<div class="sign-in"><a href="" class="top-link"><i class="icon-unlocked"></i>Zaloguj</a></div>
+			<div class="login-fb"><a href="" class="top-link"><i class="icon-facebook3"></i>Dołącz przez FB</a></div>
 		</div>
 
 		<div class="flex-header-bottom">
@@ -48,13 +50,23 @@
 	</header>
 
 	<section class="hero">
-		<figure><img src="public/images/hero.jpg" alt=""></figure>
+		<figure class="hero-img"><img src="" alt=""></figure>
 		<div class="movie-wrapper">
 			<article class="movie">
-				<a href="">
-					<figure><img src="" alt=""></figure></a>
-				<h3>Lipsum dolor</h3>
-				<p>Donec tristique, tellus non scelerisque varius, risus lectus mollis sem, id ullamcorper nisl est sit amet libero.</p>
+				<figure class="play-movie">
+					<div class="flex-play-btn">
+						<figure>
+							<img src="public/images/play-button.png" alt="Play it">
+						</figure>
+					</div>
+					<div class="flex-play-figc">
+						<figcaption>
+							<h3>Lipsum dolor</h3>
+							<p>Donec tristique, tellus non scelerisque varius, risus lectus mollis sem, id ullamcorper nisl est sit amet libero.</p>
+							<a class="play-it" href="#">View more...</a>
+						</figcaption>
+					</div>
+				</figure>
 			</article>
 		</div>
 	</section>
@@ -90,145 +102,211 @@
 					</header>
 					<p class="date">28.07.2015</p>
 					<p class="news-content">Quisque nec lectus in tortor scelerisque hendrerit. Curabitur ac ex ipsum. Fusce imperdiet dui ac orci fermentum, sit amet convallis justo ultricies. In consectetur vehicula hendrerit. Praesent maximus auctor magna. Aliquam erat volutpat. Curabitur aliquet tempor sem, convallis ullamcorper justo. Nam at arcu non ipsum consectetur vestibulum.
-					<p class="news-content">Nam a varius nisi. Maecenas auctor aliquam augue at ornare. Nulla sit amet nibh diam. Quisque tempus non ligula cursus cursus. Curabitur convallis neque sit amet consequat tristique. Vestibulum felis sem, pharetra a laoreet at, tempor non neque. Donec ut ligula id ipsum mattis consectetur eu non nunc.</p></p>
-					<div class="read-more"><a href="#"><span>Czytaj dalej...</span></a></div>
-				</article>
-				<article class="news-right">
-					<header>
-						<h3 class="title">News title 2</h3>
-					</header>
-					<p class="date">25.07.2015</p>
-					<p class="news-content">Aenean ante dui, elementum at congue aliquam, ultrices eu risus. Donec ac nibh ac lorem blandit vestibulum. Morbi dolor sapien, rutrum ac mattis ac, viverra vitae dolor. Proin vel leo nibh. Cras ultricies nunc sit amet lacus dictum, pellentesque fringilla odio malesuada. Duis et luctus justo. Sed et dolor erat.
-					<p class="news-content bottom">Donec lacinia justo eros, eu laoreet ante malesuada eget. Phasellus id odio ultrices, dapibus quam vitae, luctus lacus. Donec laoreet nunc ut est mollis, in interdum orci placerat.</p>
-					<div class="read-more"><a href="#"><span>Czytaj dalej...</span></a></div>
-				</article>
-			</div>
-		</article>
-	</section>
-
-	<section class="flex-gallery">
-		<div class="gallery gallery-1">
-			<figure><img src="public/images/gallery-1.jpg" alt="picture 1"></figure>
-		</div>
-		<div class="gallery gallery-2">
-			<figure><img src="public/images/gallery-2.jpg" alt="picture 2"></figure>
-		</div>
-		<div class="gallery gallery-3">
-			<figure><img src="public/images/gallery-3.jpg" alt="picture 3"></figure>
-		</div>
-	</section>
-	<section class="flex-gallery">
-		<div class="gallery gallery-1">
-			<figure><img src="public/images/gallery-4.jpg" alt="picture 4"></figure>
-		</div>
-		<div class="gallery gallery-2">
-			<figure><img src="public/images/gallery-5.jpg" alt="picture 5"></figure>
-		</div>
-		<div class="gallery gallery-3">
-			<figure><img src="public/images/gallery-6.jpg" alt="picture 6"></figure>
-		</div>
-	</section>
-	<section class="slider">
-		<article class="flex-slider">
-			<div class="prev">
-				<figure><img src="public/images/prev.png" alt="prev"></figure>
-			</div>
-			<div class="slide slide-1">
-				<figure class="parachute-jump">
-					<img src="public/images/parachute-jump.jpg" alt="parachute-jump">
-				</figure>
-				<header>
-					<h3>Skoki ze spadochronem</h3>
-				</header>
-				<p>Aliquam scelerisque erat sed dolor. Cras metus est, accumsan at libero ac, elementum bibendum nisi. Vivamus vel laoreet orci...</p>
-				<div class="read-more"><a href="#"><span>Czytaj więcej...</span></a></div>
-			</div>
-			<div class="slide slide-2">
-				<figure class="diving">
-					<img src="public/images/diving.jpg" alt="diving">
-				</figure>
-				<header>
-					<h3>Nurkowanie</h3>
-				</header>
-				<p>Aliquam scelerisque erat sed dolor. Cras metus est, accumsan at libero ac, elementum bibendum nisi. Vivamus vel laoreet orci...</p>
-				<div class="read-more"><a href="#"><span>Czytaj więcej...</span></a></div>
-			</div>
-			<div class="slide slide-3">
-				<figure class="bike">
-					<img src="public/images/bike.jpg" alt="bike">
-				</figure>
-				<header>
-					<h3>Jazda na rowerze</h3>
-				</header>
-				<p>Aliquam scelerisque erat sed dolor. Cras metus est, accumsan at libero ac, elementum bibendum nisi. Vivamus vel laoreet orci...</p>
-				<div class="read-more"><a href="#"><span>Czytaj więcej...</span></a></div>
-			</div>
-			<div class="next">
-				<figure><img src="public/images/next.png" alt="next"></figure>
-			</div>
-		</article>
-		<div class="slider-nav">
-			<ul>
-				<li></li>
-				<li></li>
-				<li></li>
-			</ul>
-		</div>
-	</section>
-
-	<section class="contact">
-		<article class="maps">
-			<div class="flex-map">
-				<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2446.222214639462!2d21.0007047!3d52.184833399999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4719332890f09fdf%3A0x8880c46abcc3057d!2sWo%C5%82oska+9A%2C+02-583+Warszawa!5e0!3m2!1spl!2spl!4v1441022179100" width="100%" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
-			</div>
-		</article>
-		<article class="contact-form">
-			<div class="contact-wrapper">
-				<div class="flex-contact">
-					<div class="flex-contact-h2">
+						<p class="news-content">Nam a varius nisi. Maecenas auctor aliquam augue at ornare. Nulla sit amet nibh diam. Quisque tempus non ligula cursus cursus. Curabitur convallis neque sit amet consequat tristique. Vestibulum felis sem, pharetra a laoreet at, tempor non neque. Donec ut ligula id ipsum mattis consectetur eu non nunc.</p></p>
+						<div class="read-more"><a href="#"><span>Czytaj dalej...</span></a></div>
+					</article>
+					<article class="news-right">
 						<header>
-							<h2>Kontakt</h2>
+							<h3 class="title">News title 2</h3>
 						</header>
+						<p class="date">25.07.2015</p>
+						<p class="news-content">Aenean ante dui, elementum at congue aliquam, ultrices eu risus. Donec ac nibh ac lorem blandit vestibulum. Morbi dolor sapien, rutrum ac mattis ac, viverra vitae dolor. Proin vel leo nibh. Cras ultricies nunc sit amet lacus dictum, pellentesque fringilla odio malesuada. Duis et luctus justo. Sed et dolor erat.
+							<p class="news-content bottom">Donec lacinia justo eros, eu laoreet ante malesuada eget. Phasellus id odio ultrices, dapibus quam vitae, luctus lacus. Donec laoreet nunc ut est mollis, in interdum orci placerat.</p>
+							<div class="read-more"><a href="#"><span>Czytaj dalej...</span></a></div>
+						</article>
 					</div>
-					<div class="flex-contact-left-right">
-						<div class="contact-data">
-							<p>Ut imperdiet ante eros, non venenatis neque scelerisque sed. Nullam volutpat, sem eget volutpat pulvinar, enim enim consequat sem, vel sodales elit sapien vitae ligula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc elementum justo nec lorem feugiat dictum.<br><br>00-000 Warszawa, Polska<br>
-							ul. Przykładowa 48<br><br>
-							Nr tel.: +48 (22) 999 88 77<br>
-							Nr fax: +48 (22) 999 88 76<br>
-							Nr tel. kom.: +48 999 999 999
-							<br><br>
-							E-mail: <a class="footer-a" href="mailto:biuro@hipstrertrip.com" target="_top">biuro@hipstrertrip.com</a></p>
-						</div>
-						<div class="contact-right">
-							<form>
-								<input type="text" class="name" placeholder="Imię i nazwisko">
-								<input type="email" class="email" placeholder="E-mail">
-								<textarea class="message" placeholder="Wiadomość"></textarea>
-								<input type="submit" class="form-button" value="Wyślij wiadomość">
-							</form>
-						</div>
-					</div>
+				</article>
+			</section>
+
+			<section class="flex-gallery">
+
+				<div class="gallery">
+					<figure class="gallery-figure">
+						<img class="gallery-1" src="public/images/gallery-1.jpg" alt="picture 1">
+						<!-- Dlaczego musiałem napisać inline'owo ten styl. Nawet odwołanie
+						za pomocą ID nie nadało wł. text-align: center -->
+						<img class="plusik" src="public/images/hover-plus.png" alt="more">
+						<figcaption style="text-align: center;" class="gallery-figc">
+							<h3>Apartamenty TWW Stary Browar</h3>
+							<p>Proin eget tempus velit. Vestibulum at lobortis augue. Aliquam scelerisque erat sed dolor interdum, id gravida quam consectetur. Quisque egestas consequat tellus. Cras metus est, accumsan at libero ac, elementum bibendum nisi. Vivamus vel laoreet orci...</p>
+						</figcaption>
+						<a href="#">View more...</a>
+					</figure>
 				</div>
-			</div>
-		</article>
-	</section>
-	<footer class="flex-footer">
-		<a class="footer-a" href="#"><span>Polityka Prywatności</span></a>
-		<span>&nbsp | &nbsp</span>
-		<a class="footer-a" href="#"><span>Polityka Cookies</span></a>
-		<span>&nbsp | &nbsp</span>
-		<span>Copyright (c)2015 efigence S.A.</span>
-		<figure class="fb">
-			<img src="public/images/fb-footer.png" alt="facebook">
-		</figure>
-		<figure class="twitter">
-			<img src="public/images/twitter-footer.png" alt="twitter">
-		</figure>
-	</footer>
-</header>
+				<div class="gallery">
+					<figure class="gallery-figure">
+						<img class="gallery-2" src="public/images/gallery-2.jpg" alt="picture 2">
+						<!-- Dlaczego musiałem napisać inline'owo ten styl. Nawet odwołanie
+						za pomocą ID nie nadało wł. text-align: center -->
+						<img class="plusik" src="public/images/hover-plus.png" alt="more">
+						<figcaption style="text-align: center;" class="gallery-figc">
+							<h3>Apartamenty TWW Stary Browar</h3>
+							<p>Proin eget tempus velit. Vestibulum at lobortis augue. Aliquam scelerisque erat sed dolor interdum, id gravida quam consectetur. Quisque egestas consequat tellus. Cras metus est, accumsan at libero ac, elementum bibendum nisi. Vivamus vel laoreet orci...</p>
+						</figcaption>
+						<a href="#">View more...</a>
+					</figure>
+				</div>
+				<div class="gallery">
+					<figure class="gallery-figure">
+						<img class="gallery-3" src="public/images/gallery-3.jpg" alt="picture 3">
+						<!-- Dlaczego musiałem napisać inline'owo ten styl. Nawet odwołanie
+						za pomocą ID nie nadało wł. text-align: center -->
+						<img class="plusik" src="public/images/hover-plus.png" alt="more">
+						<figcaption style="text-align: center;" class="gallery-figc">
+							<h3>Apartamenty TWW Stary Browar</h3>
+							<p>Proin eget tempus velit. Vestibulum at lobortis augue. Aliquam scelerisque erat sed dolor interdum, id gravida quam consectetur. Quisque egestas consequat tellus. Cras metus est, accumsan at libero ac, elementum bibendum nisi. Vivamus vel laoreet orci...</p>
+						</figcaption>
+						<a href="#">View more...</a>
+					</figure>
+				</div>
+
+			</section>
+			<section class="flex-gallery">
+
+				<div class="gallery">
+					<figure class="gallery-figure">
+						<img class="gallery-4" src="public/images/gallery-4.jpg" alt="picture 4">
+						<!-- Dlaczego musiałem napisać inline'owo ten styl. Nawet odwołanie
+						za pomocą ID nie nadało wł. text-align: center -->
+						<img class="plusik" src="public/images/hover-plus.png" alt="more">
+						<figcaption style="text-align: center;" class="gallery-figc">
+							<h3>Apartamenty TWW Stary Browar</h3>
+							<p>Proin eget tempus velit. Vestibulum at lobortis augue. Aliquam scelerisque erat sed dolor interdum, id gravida quam consectetur. Quisque egestas consequat tellus. Cras metus est, accumsan at libero ac, elementum bibendum nisi. Vivamus vel laoreet orci...</p>
+						</figcaption>
+						<a href="#">View more...</a>
+					</figure>
+				</div>
+				<div class="gallery">
+					<figure class="gallery-figure">
+						<img class="gallery-5" src="public/images/gallery-5.jpg" alt="picture 5">
+						<!-- Dlaczego musiałem napisać inline'owo ten styl. Nawet odwołanie
+						za pomocą ID nie nadało wł. text-align: center -->
+						<img class="plusik" src="public/images/hover-plus.png" alt="more">
+						<figcaption style="text-align: center;" class="gallery-figc">
+							<h3>Apartamenty TWW Stary Browar</h3>
+							<p>Proin eget tempus velit. Vestibulum at lobortis augue. Aliquam scelerisque erat sed dolor interdum, id gravida quam consectetur. Quisque egestas consequat tellus. Cras metus est, accumsan at libero ac, elementum bibendum nisi. Vivamus vel laoreet orci...</p>
+						</figcaption>
+						<a href="#">View more...</a>
+					</figure>
+				</div>
+				<div class="gallery">
+					<figure class="gallery-figure">
+						<img class="gallery-6" src="public/images/gallery-6.jpg" alt="picture 6">
+						<!-- Dlaczego musiałem napisać inline'owo ten styl. Nawet odwołanie
+						za pomocą ID nie nadało wł. text-align: center -->
+						<img class="plusik" src="public/images/hover-plus.png" alt="more">
+						<figcaption style="text-align: center;" class="gallery-figc">
+							<h3>Apartamenty TWW Stary Browar</h3>
+							<p>Proin eget tempus velit. Vestibulum at lobortis augue. Aliquam scelerisque erat sed dolor interdum, id gravida quam consectetur. Quisque egestas consequat tellus. Cras metus est, accumsan at libero ac, elementum bibendum nisi. Vivamus vel laoreet orci...</p>
+						</figcaption>
+						<a href="#">View more...</a>
+					</figure>
+				</div>
+
+			</section>
+			<section class="slider">
+				<article class="flex-slider">
+					<div class="prev">
+						<figure><img src="public/images/prev.png" alt="prev"></figure>
+					</div>
+					<div class="slide slide-1">
+						<figure class="parachute-jump">
+							<img src="public/images/parachute-jump.jpg" alt="parachute-jump">
+						</figure>
+						<header>
+							<h3>Skoki ze spadochronem</h3>
+						</header>
+						<p>Aliquam scelerisque erat sed dolor. Cras metus est, accumsan at libero ac, elementum bibendum nisi. Vivamus vel laoreet orci...</p>
+						<div class="read-more"><a href="#"><span>Czytaj więcej...</span></a></div>
+					</div>
+					<div class="slide slide-2">
+						<figure class="diving">
+							<img src="public/images/diving.jpg" alt="diving">
+						</figure>
+						<header>
+							<h3>Nurkowanie</h3>
+						</header>
+						<p>Aliquam scelerisque erat sed dolor. Cras metus est, accumsan at libero ac, elementum bibendum nisi. Vivamus vel laoreet orci...</p>
+						<div class="read-more"><a href="#"><span>Czytaj więcej...</span></a></div>
+					</div>
+					<div class="slide slide-3">
+						<figure class="bike">
+							<img src="public/images/bike.jpg" alt="bike">
+						</figure>
+						<header>
+							<h3>Jazda na rowerze</h3>
+						</header>
+						<p>Aliquam scelerisque erat sed dolor. Cras metus est, accumsan at libero ac, elementum bibendum nisi. Vivamus vel laoreet orci...</p>
+						<div class="read-more"><a href="#"><span>Czytaj więcej...</span></a></div>
+					</div>
+					<div class="next">
+						<figure><img src="public/images/next.png" alt="next"></figure>
+					</div>
+				</article>
+				<div class="slider-nav">
+					<ul>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+				</div>
+			</section>
+
+			<section class="contact">
+				<article class="maps">
+					<div class="flex-map">
+						<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2446.222214639462!2d21.0007047!3d52.184833399999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4719332890f09fdf%3A0x8880c46abcc3057d!2sWo%C5%82oska+9A%2C+02-583+Warszawa!5e0!3m2!1spl!2spl!4v1441022179100" width="100%" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+					</div>
+				</article>
+				<article class="contact-form">
+					<div class="contact-wrapper">
+						<div class="flex-contact">
+							<div class="flex-contact-h2">
+								<header>
+									<h2>Kontakt</h2>
+								</header>
+							</div>
+							<div class="flex-contact-left-right">
+								<div class="contact-data">
+									<p>Ut imperdiet ante eros, non venenatis neque scelerisque sed. Nullam volutpat, sem eget volutpat pulvinar, enim enim consequat sem, vel sodales elit sapien vitae ligula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc elementum justo nec lorem feugiat dictum.<br><br>00-000 Warszawa, Polska<br>
+										ul. Przykładowa 48<br><br>
+										Nr tel.: +48 (22) 999 88 77<br>
+										Nr fax: +48 (22) 999 88 76<br>
+										Nr tel. kom.: +48 999 999 999
+										<br><br>
+										E-mail: <a class="footer-a" href="mailto:biuro@hipstrertrip.com" target="_top">biuro@hipstrertrip.com</a></p>
+									</div>
+									<div class="contact-right">
+										<form>
+											<input type="text" class="name" placeholder="Imię i nazwisko">
+											<input type="email" class="email" placeholder="E-mail">
+											<textarea class="message" placeholder="Wiadomość"></textarea>
+											<input type="submit" class="form-button" value="Wyślij wiadomość">
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</article>
+				</section>
+				<footer class="flex-footer">
+					<a class="footer-a" href="#"><span>Polityka Prywatności</span></a>
+					<span>&nbsp | &nbsp</span>
+					<a class="footer-a" href="#"><span>Polityka Cookies</span></a>
+					<span>&nbsp | &nbsp</span>
+					<span>Copyright (c)2015 efigence S.A.</span>
+					<figure class="fb">
+						<img src="public/images/fb-footer.png" alt="facebook">
+					</figure>
+					<figure class="twitter">
+						<img src="public/images/twitter-footer.png" alt="twitter">
+					</figure>
+				</footer>
 
 
-<script src="js/scripts.js"></script>
-</body>
-</html>
+
+
+
+				<script src="js/scripts.js"></script>
+			</body>
+			</html>
