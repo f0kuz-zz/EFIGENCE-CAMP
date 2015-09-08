@@ -361,7 +361,7 @@ Jeśli translate3d chcę użyć do animacji a nie pozycji startowej */
 	width: 100%;
 	z-index: 1000;
 	white-space: nowrap;
-	text-indent: 9999px;
+	text-indent: -9999px;
 }
 
 .desc h3{
