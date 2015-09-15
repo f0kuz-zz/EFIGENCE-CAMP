@@ -1,4 +1,8 @@
-({
+$('.hamburger').on('click', function(){
+	$('.menu').slideToggle();
+});
+
+/*({
 	nextPage: 1,
 
 	parseResults: function (opts) {
@@ -67,4 +71,4 @@
 		this.inifiniteScroll();
 	}
 
-}).init();
+}).init();*/

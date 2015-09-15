@@ -117,6 +117,10 @@ figure{
 
 	/* MAIN MENU */
 
+.hamburger{
+	display: none;
+}
+
 .main-menu{
 	display: flex;
 	margin: auto;
@@ -127,7 +131,7 @@ figure{
 	width: 100%;
 }
 
-.main-li{
+.main-ul li{
 	display: inline;
 	padding: 34px 10px;
 	margin-left: 15px; /* Dlaczego w % ostatni element li łamany jest do nowego wiersza? */
@@ -135,11 +139,11 @@ figure{
 	transition: border-bottom .3s ease-out;
 }
 
-.main-li:hover{
+.main-ul li:hover{
 	border-bottom: 5px solid #f9d100;
 }
 
-.main-li a{
+.main-ul a{
 	text-decoration: none;
 	color: #fff;
 	font-family: Calibri, sans-serif;
@@ -178,42 +182,76 @@ figure{
 
 /* HERO */
 
-.hero{
+/*.hero{
+	position: relative;
 	display: flex;
 	margin: 0;
 	padding: 0;
-	position: relative;
-}
+}*/
 
 .hero-img{
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
 	height: 799px;
-	width: 1920px;
+	/*width: 1920px;*/
 	background-image: url(../images/hero.jpg);
 	background-position: center center;
 	background-size: cover;
 	width: 100%;
 	margin: 0;
+	padding: 0;
+	justify-content: center;
+	align-items: stretch;
 }
 
-.movie-wrapper{
-	display: flex;
+/* VIDEO */
+
+.bg-video:before{
+	content: '';
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 9998;
+	background: rgba(0,0,0,.7);
+	/*display: none;*/
+}
+
+/*.bg-video:target:before{
+	display: block;
+}*/
+
+.bg-video{
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	/*width:40%; - dlaczego dopiero po wyłączeniu tej wł. dzieci tego elementu
-	dopasowują się w 100% do tego rodzica*/
+	transform: translate(-50%, -200%);
+	max-width: 100%;
+	height: auto;
+	width: auto;
+	z-index: 9999;
+	transition: transform .95s;
+}
+
+body:target .bg-video{
+	transform: translate(-50%, 500%);
+}
+
+.flex-movie-wrapper{
+	display: flex;
+	position: relative;
 	width: 35%;
-	height: 60%;
-	transform: translate(-50%,-50%);
 	background: rgba(174,214,249,.5);
 	box-shadow: 3px 3px 18px 6px rgba(0,0,0,.35);
+	height: 65%;
+	-ms-align-self: center;
+	align-self: center;
 }
 
-.movie{
-	display: flex;
-}
-
-.play-movie{
+.flex-play-movie{
+	position: relative;
 	display: flex;
 	margin: 0;
 	width: 100%;
@@ -223,19 +261,19 @@ figure{
 	text-align: center;
 	align-content: center;
 	flex-wrap: wrap;
+	transform: translateY(10%);
+
 }
 
-.flex-play-btn{
-	display: flex;
-	flex: 1 0 100%;
-	justify-content: center;
+.play-btn{
+	position: absolute;
 	opacity: .3;
 	transition: opacity .25s ease-out;
 	width: 100%;
 	height: 100%;
 }
 
-.play-movie:hover .flex-play-btn{
+.flex-play-movie:hover .play-btn{
 	opacity: 1;
 }
 
@@ -245,7 +283,7 @@ figure{
 	justify-content: center;
 }
 
-.play-movie figcaption{
+.flex-play-figc figcaption{
 	padding-top: 5em;
 	align-self: center;
 	text-align: center;
@@ -253,7 +291,7 @@ figure{
 	width: 80%;
 }
 
-.play-movie h3{
+.flex-play-figc h3{
 	color: #f1f2f5;
 	font-size: 4.2rem;
 	text-transform: uppercase;
@@ -660,9 +698,110 @@ nadali byście tej sekcji: %, min-height, max-height?, @media */
 	margin-right: 3%;
 }
 
+@media (min-width: 375px) and (max-width: 767px){
+
+	.flex-header-top{
+		justify-content: space-between;
+		padding: 5px;
+	}
+
+	.hamburger{
+		display: block;
+		cursor: pointer;
+	}
+
+	.line{
+		width: 35px;
+		margin-bottom: 6px;
+		border-bottom: 4px solid #f9d100;
+	}
+
+	.flex-header-bottom{
+		justify-content: flex-start;
+		flex-wrap: wrap;
+		background-size: cover;
+	}
+
+	.a-log{
+		margin-top: 15px;
+		margin-right: auto;
+	}
+
+	.main-menu{
+		display: block;
+		width: 100%;
+		margin: 25px 20px 10px;
+	}
+
+	.main-ul{
+		display: flex;
+		flex-wrap: wrap;
+		width: 100%;
+	}
+
+	.main-ul li{
+		width: 100%;
+		display: block;
+		padding: 25px 0;
+		border-bottom: none!important;
+		margin: 0;
+	}
+
+	.menu{
+		/*height: 0;
+		overflow: hidden;*/
+		display: none;
+	}
+
+	.search-bar{
+		display: none;
+	}
+
+	.hero-img{
+		height: 569px;
+	}
+
+	.flex-play-figc h3{
+		font-size: 3.2rem;
+	}
+
+	.flex-movie-wrapper{
+		width: 90%;
+	}
+
+	.two-columns{
+		flex-wrap: wrap;
+	}
+
+	.what-is-this{
+		flex-basis: 100%;
+		padding-left: 7%;
+		min-height: 0;
+	}
+
+	.news{
+		flex-basis: 100%;
+		min-height: 0;
+	}
+
+	.flex-gallery{
+		flex-wrap: wrap;
+	}
+
+	.gallery{
+		flex-basis: 100%;
+	}
+
+	.fxn{
+		display: none;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 1365px){
 
 
 
+}
 
 
 
