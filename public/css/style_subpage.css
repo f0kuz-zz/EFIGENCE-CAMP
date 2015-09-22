@@ -92,18 +92,14 @@ table {
 	line-height: 24px;
 	display: table-cell;
 	vertical-align: middle;
-	padding: 0 8px; /* dlaczego w % słowa po spacji łamią się do nowej lini?
-	Czy w responsive używamy % czy px? - ZALEŻY!*/
+	padding: 0 8px;
 }
 
 /* HEADER BOTTOM */
 
-
-/* Jakie właściwości box-model(height) w odniesieniu do responive
-nadac tej sekcji: %, min-height, max-height?, @media */
 .header-bottom{
 	position: relative;
-	height: 98px; /* usunąć po ostylowaniu calego headera i spr czy jest tak jak w index */
+	height: 98px;
 	margin: 0;
 	padding: 0 2%;
 	border-bottom: 1px solid #75b8e5;
@@ -120,8 +116,6 @@ nadac tej sekcji: %, min-height, max-height?, @media */
 	transform: translateY(-50%);
 }
 
-/* Jak lepiej wyśrodkować w pionie diva z listą? Nadając display: table;
-czy line-height przy którym łamanie do nowej linii ma duży padding */
 .main-menu{
 	margin: 0 auto;
 	position: absolute;
@@ -158,9 +152,7 @@ czy line-height przy którym łamanie do nowej linii ma duży padding */
 	position: absolute;
 	top: 50%;
 	right: 1%;
-	transform: translateX(-50%);
-	transform: translateY(-50%); /* Dlaczego dodając translateX(-50%) browser
-	wyłącza wł translateY? */
+	transform: translateY(-50%);
 }
 
 .search{
@@ -211,9 +203,8 @@ czy line-height przy którym łamanie do nowej linii ma duży padding */
 	position: absolute;
 	top: 50%;
 	padding-left: 0;
-	margin-left: -15px; /* Jak wyrównać lewy margines do zdjęcia niżej? */
-	transform: translateY(-50%); /* Dlaczego dodając translateX(-50%) browser
-	wyłączał translateY? */
+	margin-left: -15px;
+	transform: translateY(-50%);
 	text-align: right;
 }
 
@@ -332,10 +323,6 @@ czy line-height przy którym łamanie do nowej linii ma duży padding */
 	left: 50%;
 	transform: translateX(-50%);
 }
-
-
-/* Jak najlepiej wycentrować wzgl offer-img?
-Jeśli translate3d chcę użyć do animacji a nie pozycji startowej */
 .plusik{
 	position: absolute;
 	width: 55px;
@@ -375,16 +362,10 @@ Jeśli translate3d chcę użyć do animacji a nie pozycji startowej */
 	color: #a3b1bc;
 }
 
-.rate-ul{
-	list-style: none;
-}
-
-.rate-ul li{
-	width: 20px;
-	height: 20px;
-	margin: 12px 0 30px 0;
-	display: inline-block;
-	background: url(../images/star.png) center center no-repeat;
+.icon-star-full{
+	font-size: 1.4rem;
+	color: #bca51d;
+	margin-bottom: 10px;
 }
 
 .desc-p{
@@ -392,10 +373,10 @@ Jeśli translate3d chcę użyć do animacji a nie pozycji startowej */
 	color: #00101c;
 	font-family: Arial, sans-serif;
 	font-size: .9rem;
+	margin-top: 15px;
 }
 
 .desc-moreinfo{
-	display: inline-block;
 	margin-top: 25px;
 	float: right;
 	font-family: Arial, sans-serif;
@@ -414,7 +395,7 @@ Jeśli translate3d chcę użyć do animacji a nie pozycji startowej */
 .facilities-ul li{
 	font-size: 1.6rem;
 	font-weight: 700;
-	line-height: 50px; /* nie działa ostatnia icona icon-lifebuoy. Why? */
+	line-height: 50px;
 }
 
 .custom{
@@ -494,7 +475,7 @@ Jeśli translate3d chcę użyć do animacji a nie pozycji startowej */
 
 .pagina-ul-prev{
 	list-style: none;
-	padding: 0; /* PADDING WPŁYWA NA ŁAMANIE LINI ZDANIA - TU OKRESLONY NIE PRZENOSI DO NOWEJ LINII */
+	padding: 0;
 	margin: 0;
 }
 
@@ -521,8 +502,6 @@ Jeśli translate3d chcę użyć do animacji a nie pozycji startowej */
 	list-style: none;
 }
 
-/* Dlaczego słowo po spacji łamane
-jest do nowego wiersza -następna strona- */ /* Bo nie była nadany padding coćby na 0 */
 .pagina-ul li{
 	display: table-cell;
 	font-family: Arial, sans-serif;
@@ -566,6 +545,7 @@ jest do nowego wiersza -następna strona- */ /* Bo nie była nadany padding coć
 /* FOOTER */
 
 .footer{
+	position: relative;
 	width: 100%;
 	height: 99px;
 	margin: 0;
@@ -575,4 +555,40 @@ jest do nowego wiersza -następna strona- */ /* Bo nie była nadany padding coć
 
 footer a{
 	line-height: 99px;
+	font-size: .95rem;
+	color: #bca51d;
+	text-decoration: none;
+	transition: color .22s;
+	font-family: 'Roboto Condensed';
+}
+
+.copy{
+	color: #fff;
+}
+
+.twitter-footer{
+	position: absolute;
+	top: 50%;
+	right: 20px;
+	transform: translateY(-50%);
+}
+
+.fb-footer{
+	position: absolute;
+	top: 50%;
+	right: 65px;
+	transform: translateY(-50%);
+}
+
+.footer figure a{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.footer{
+	padding-left: 20px;
 }

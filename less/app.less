@@ -54,7 +54,7 @@ table {
 }
 
 figure{
-	margin-bottom: -3px; /* Nie wiedzieć czemu pojawia się taki margines */
+	margin-bottom: -3px;
 }
 
 /* MAIN HEADER */
@@ -106,8 +106,6 @@ figure{
 	transition: font-size .20s;
 }
 
-
-/* Czemu to nie działa? */
 .icon-unlocked:before:hover{
 	font-size: 1.2rem;
 }
@@ -142,7 +140,7 @@ figure{
 }
 
 .logo img:hover{
-	width: 125%;
+	width: 120.5%;
 }
 
 	/* MAIN MENU */
@@ -176,7 +174,7 @@ figure{
 .main-ul a{
 	text-decoration: none;
 	color: #fff;
-	font-family: Calibri, sans-serif;
+	font-family: 'Roboto Condensed', sans-serif;
 	font-size: 1.4rem;
 	font-weight: 100;
 }
@@ -188,7 +186,6 @@ figure{
 	height: 43px;
 }
 
-/* Jak poprawnie podłożyć bg image pod search element */
 .search{
 	height: 43px;
 	padding-left: 5%;
@@ -203,7 +200,7 @@ figure{
 	margin-left: -10px;
 	border: 1px solid #5fa2cf;
 	border-left: none;
-	color: #084b78;
+	color: transparent;
 	line-height: 15px;
 	background: #084b78 url(../images/submit.png) 50% 50% no-repeat;
 	box-shadow: 0 2px 10px 1px #3f3640 inset;
@@ -211,13 +208,6 @@ figure{
 }
 
 /* HERO */
-
-/*.hero{
-	position: relative;
-	display: flex;
-	margin: 0;
-	padding: 0;
-}*/
 
 .hero-img{
 	position: relative;
@@ -249,15 +239,11 @@ figure{
 	/*display: none;*/
 }
 
-/*.bg-video:target:before{
-	display: block;
-}*/
-
 .bg-video{
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%, -200%);
+	transform: translate(-50%, -50%);
 	max-width: 100%;
 	height: auto;
 	width: auto;
@@ -292,7 +278,6 @@ body:target .bg-video{
 	align-content: center;
 	flex-wrap: wrap;
 	transform: translateY(10%);
-
 }
 
 .play-btn{
@@ -338,9 +323,8 @@ body:target .bg-video{
 
 .flex-play-figc a{
 	display: block;
-	position: absolute; /* po dodaniu position: absolute i left 0 top 0
-	element a osiąga wkoncu min-height i width */
-	top: 0;
+	position: absolute;
+	top: -53px;
 	left: 0;
 	min-height: 100%;
 	width: 100%;
@@ -415,9 +399,6 @@ body:target .bg-video{
 }
 
 .news{
-	/*display: flex;
-	flex-basis: 50%;
-	flex-wrap: wrap;*/
 	width: 50%;
 	max-height: 600px;
 	min-height: 500px;
@@ -559,8 +540,6 @@ body:target .bg-video{
 
 /* SLIDER */
 
-/* Jakie właściwości box-model(height) w odniesieniu do responive
-nadali byście tej sekcji: %, min-height, max-height?, @media */
 .slider{
 	display: flex;
 	height: 600px;
@@ -574,14 +553,22 @@ nadali byście tej sekcji: %, min-height, max-height?, @media */
 	display: flex;
 	justify-content: center;
 	margin: auto;
-	width: 60%;
+	width: 1305px;
+	overflow: hidden;
 	height: 63%;
+}
+
+.flex-content-slider{
+	position: relative;
+	display: flex;
+	width: 922px;
+	overflow: hidden;
 }
 
 .prev{
 	height: 156px;
 	width: 92px;
-	margin-right: 6%;
+	margin-right: 40px;
 	align-self: center;
 	cursor: pointer;
 }
@@ -593,7 +580,7 @@ nadali byście tej sekcji: %, min-height, max-height?, @media */
 .next{
 	height: 156px;
 	width: 92px;
-	margin-left: 6%;
+	margin-left: 40px;
 	align-self: center;
 	cursor: pointer;
 }
@@ -603,18 +590,14 @@ nadali byście tej sekcji: %, min-height, max-height?, @media */
 }
 
 .slide{
-	width: 279px;
+	width: 280px;
 	height: 375px;
-	padding: 8px;
-	margin-right: 6%;
-	font-family: Arial, sans-serif;
+	padding: 11px;
+	margin-right: 40px;
+	font-family: 'Roboto Condensed', sans-serif;
 	color: #fff;
 	background: #00101c;
 	opacity: .3;
-}
-
-.slide-3{
-	margin-right: 0;
 }
 
 .slide-active{
@@ -622,8 +605,8 @@ nadali byście tej sekcji: %, min-height, max-height?, @media */
 }
 
 .slide h3{
-	font-size: 1.2rem;
-	font-weight: 100;
+	font-size: 1.3rem;
+	font-weight: 200;
 	padding-top: 9%;
 }
 
@@ -667,9 +650,6 @@ nadali byście tej sekcji: %, min-height, max-height?, @media */
 	right: 3%;
 }
 
-.flex-contact{
-}
-
 .flex-contact-h2{
 	padding: 5% 0 0 5%;
 	font-size: 1.3rem;
@@ -710,6 +690,14 @@ nadali byście tej sekcji: %, min-height, max-height?, @media */
 	height: 188px;
 }
 
+.form p{
+	color: #fff;
+}
+
+input.ng-invalid{
+	border: 1px solid red;
+}
+
 .form-button{
 	width: 80%;
 	height: 44px;
@@ -723,7 +711,6 @@ nadali byście tej sekcji: %, min-height, max-height?, @media */
 .form-button:hover{
 	color: #c3ae33;
 	background: #00223B;
-
 }
 
 .footer-a{
@@ -766,8 +753,6 @@ nadali byście tej sekcji: %, min-height, max-height?, @media */
 		padding: 5px;
 	}
 
-	/* Jak łączyć media queries z przebudową html?
-	Tu aż się prosi abym .hamburger dał w oddzielnych wrapperach wraz z logo */
 	.hamburger{
 		display: block;
 		cursor: pointer;
@@ -815,8 +800,6 @@ nadali byście tej sekcji: %, min-height, max-height?, @media */
 	}
 
 	.menu{
-		/*height: 0;
-		overflow: hidden;*/
 		display: none;
 	}
 
@@ -841,7 +824,7 @@ nadali byście tej sekcji: %, min-height, max-height?, @media */
 	}
 
 	.flex-movie-wrapper{
-		width: 90%;
+		width: 80%;
 	}
 
 	.two-columns{
@@ -867,8 +850,8 @@ nadali byście tej sekcji: %, min-height, max-height?, @media */
 		flex-basis: 100%;
 	}
 
-	.gallery-1, .gallery-2, .gallery-3{
-		/*width: 100%;*/
+	.gallery-figure img:first-of-type{
+		width: 100%;
 	}
 
 	.none{
@@ -897,13 +880,84 @@ nadali byście tej sekcji: %, min-height, max-height?, @media */
 	.form-button{
 		width: 80.75%;
 	}
+}
+
+@media (min-width: 560px) and (max-width: 940px){
+
+	.flex-content-slider div:nth-child(1n+2){
+		display: none;
+	}
+
+	.flex-content-slider{
+		width: 280px;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 880px){
+
+	.flex-movie-wrapper{
+		width: 500px;
+	}
+
+	.two-columns{
+	flex-wrap: wrap;
+	}
+
+	.what-is-this{
+		flex-basis: 100%;
+		padding-left: 7%;
+		min-height: 0;
+	}
+
+	.news{
+		flex-basis: 100%;
+		min-height: 0;
+	}
 
 }
 
-@media (min-width: 768px) and (max-width: 1365px){
+@media (min-width: 768px) and (max-width: 1100px){
 
+	.search-bar{
+		display: none;
+	}
 
+	.flex-gallery div:last-child{
+		display: none;
+	}
 
+	.contact-wrapper{
+		width: 64%;
+		height: 460px;
+	}
+}
+
+@media (min-width: 880px) and (max-width: 1240px){
+
+	.slide-3{
+		display: none;
+	}
+
+	.flex-content-slider{
+		justify-content: center;
+		width: 622px;
+	}
+
+	.slide-2{
+		margin-right: initial;
+	}
+
+	.flex-movie-wrapper{
+		width: 60%;
+	}
+
+	.what-is-this{
+		padding-left: 5%;
+	}
+
+	.news{
+		padding-right: 5%;
+	}
 }
 
 
